@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -26,6 +23,25 @@ time, mark, audio, video {
 
 :root {
   font-size: 10px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  --white: #FFFFFF;
+  --black: #000000;
+  --blue: #3B82F6;
+  --red: #EF4444;
+  --gray-100: #D1D5DB;
+  --gray-200: #9CA3AF;
+  --gray-300: #6B7280;
+  --gray-400: #4B5563;
+  --gray-500: #374151;
+  --overlay: rgba(0, 0, 0, .25);
+
+  --size-xs: 0.8rem;
+  --size-sm: 1.2rem;
+  --size-md: 1.6rem;
+  --size-lg: 2.6rem;
 }
 
 /* HTML5 display-role reset for older browsers */
