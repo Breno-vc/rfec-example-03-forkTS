@@ -1,0 +1,25 @@
+.formControl {
+    background-color: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+    font-size: var(--size-md);
+    color: var(--black);
+    padding: 1.1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.formControl::placeholder {
+    color: var(--gray-200);
+}
+
+.formControl:focus-visible {
+    outline: none;
+}
+
+.formControl:focus {
+    border: 1px solid var(--black);
+}
+
+.disableResize {
+    resize: none;
+}
