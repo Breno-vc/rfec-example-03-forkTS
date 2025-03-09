@@ -1,61 +1,65 @@
 .btn {
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-    font-family: inherit;
-    cursor: pointer;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .primary {
-    background-color: var(--blue-100);
-    color: var(--white);
-    padding: var(--size-sm) var(--size-md);
-    border-radius: var(--radius);
-    font-size: var(--size-md);
-    font-weight: bold;
+  background-color: var(--blue-100);
+  color: var(--white);
+  padding: var(--size-sm) var(--size-md);
+  border-radius: var(--radius);
+  font-size: var(--size-md);
+  font-weight: bold;
 }
 
-.primary:hover, .primary:active {
-    background-color: var(--blue-200);
+.primary:hover,
+.primary:active {
+  background-color: var(--blue-200);
 }
 
 .secondary {
-    background-color: var(--gray-300);
-    color: var(--white);
-    padding: var(--size-sm) var(--size-md);
-    border-radius: var(--radius);
-    font-size: var(--size-md);
-    font-weight: bold;
+  background-color: var(--gray-300);
+  color: var(--white);
+  padding: var(--size-sm) var(--size-md);
+  border-radius: var(--radius);
+  font-size: var(--size-md);
+  font-weight: bold;
 }
 
-.secondary:hover, .secondary:active {
-    background-color: var(--gray-500);
+.secondary:hover,
+.secondary:active {
+  background-color: var(--gray-500);
 }
 
 .edit {
-    background-color: var(--white);
-    color: var(--blue-100);
-    font-size: var(--size-sm);
-    font-weight: 400;
+  background-color: var(--white);
+  color: var(--blue-100);
+  font-size: var(--size-sm);
+  font-weight: 400;
 }
 
-.edit:hover, .edit:active {
-    color: var(--blue-200);
+.edit:hover,
+.edit:active {
+  color: var(--blue-200);
 }
 
 .delete {
-    background-color: var(--white);
-    color: var(--red-100);
-    font-size: var(--size-sm);
-    font-weight: 400;
+  background-color: var(--white);
+  color: var(--red-100);
+  font-size: var(--size-sm);
+  font-weight: 400;
 }
 
-.delete:hover, .delete:active {
-    color: var(--red-200);
+.delete:hover,
+.delete:active {
+  color: var(--red-200);
 }
 
 .fullWidth {
-    width: 100%;
+  width: 100%;
 }
