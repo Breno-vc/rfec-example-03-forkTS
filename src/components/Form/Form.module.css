@@ -1,4 +1,16 @@
-.formControl {
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-md);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-sm);
+}
+
+.control {
   background-color: var(--white);
   border: 1px solid var(--gray-100);
   border-radius: var(--radius);
@@ -8,15 +20,15 @@
   font-family: 'Inter', sans-serif;
 }
 
-.formControl::placeholder {
+.control::placeholder {
   color: var(--gray-200);
 }
 
-.formControl:focus-visible {
+.control:focus-visible {
   outline: none;
 }
 
-.formControl:focus {
+.control:focus {
   border: 1px solid var(--black);
 }
 

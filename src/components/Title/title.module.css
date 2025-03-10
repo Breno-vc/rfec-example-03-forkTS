@@ -1,5 +1,5 @@
 .h1 {
-  font-size: var(--size-lg);
+  font-size: var(--size-xl);
   font-weight: bold;
 }
 
@@ -9,6 +9,6 @@
 }
 
 .h3 {
-  font-size: var(--size-lg);
+  font-size: var(--size-md);
   font-weight: bold;
 }

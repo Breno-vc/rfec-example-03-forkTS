@@ -8,41 +8,39 @@ const Root = (props) => {
   )
 }
 
-const Input = (props) => {
-  return <input {...props} className={styles.formControl} type="text" />
+const Group = ({ children }) => {
+  return <div className={styles.group}>{children}</div>
 }
 
-const TextArea = (props) => {
+const Label = (props) => {
+  return <label {...props}>{props.children}</label>
+}
+
+const Input = (props) => {
+  return <input {...props} className={styles.control} type="text" />
+}
+
+const TextArea = ({ disableResize, ...props }) => {
   return (
     <textarea
       {...props}
       className={
-        styles.formControl +
-        `${props.disableResize ? ' ' + styles.disableResize : ''}`
+        styles.control + `${disableResize ? ' ' + styles.disableResize : ''}`
       }
     />
   )
 }
 
-const FormControl = {
+const Control = {
   Input,
   TextArea
 }
 
 const Form = {
   Root,
-  FormControl
+  Group,
+  Label,
+  Control
 }
 
 export default Form
-
-/**
- * Proxima call vamos trocar esse componente por um de Form que centraliza tudo por la.
- * Vamos trocar o nome da branch com o rename.
- * Form.Root
- * Form.Group
- * Form.Label
- * Form.Control.Input
- * Form.Control.TextArea
- * Form.ErrorMessage
- */

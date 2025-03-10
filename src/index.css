@@ -112,7 +112,8 @@ input {
   --size-xs: 0.8rem;
   --size-sm: 1.2rem;
   --size-md: 1.6rem;
-  --size-lg: 2.6rem;
+  --size-lg: 1.8rem;
+  --size-xl: 2.6rem;
 
   --radius: 0.4rem;
 }
