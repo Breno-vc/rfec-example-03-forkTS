@@ -3,12 +3,10 @@ import { useState } from 'react'
 import styles from './addnote.module.css'
 import Button from '../Button/Button'
 import NoteForm from '../NoteForm/NoteForm'
-import useLocalStorage from '../../hooks/useLocalStorage'
 import { v4 as uuid } from 'uuid'
 
-const AddNote = () => {
+const AddNote = ({ notes, setNotes }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [notes, setNotes] = useLocalStorage('notes', [])
 
   function handleClose(event) {
     if (event.target == event.currentTarget) {
