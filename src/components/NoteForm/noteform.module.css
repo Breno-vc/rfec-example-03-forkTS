@@ -24,3 +24,10 @@
 .container > h2 {
   margin-bottom: var(--size-sm);
 }
+
+.formActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--size-xl);
+}
