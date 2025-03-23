@@ -15,8 +15,9 @@ const Notes = ({ notes, setNotes }) => {
             <Note
               key={note.uuid}
               {...note}
-              onEdit={() => {}}
               onDelete={handleDeleteNote}
+              notes={notes}
+              setNotes={setNotes}
             />
           )
         })

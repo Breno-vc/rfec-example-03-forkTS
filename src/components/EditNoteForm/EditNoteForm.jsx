@@ -1,19 +1,20 @@
 import { createPortal } from 'react-dom'
 import Title from '../Title/Title'
-import styles from './noteform.module.css'
+import styles from './editnoteform.module.css'
 import Form from '../Form/Form'
 import Button from '../Button/Button'
 
-const NoteForm = ({ onClose, onAdd }) => {
+const EditNoteForm = ({ onClose, onEdit, editingNote }) => {
   function handleSubmit(event) {
     event.preventDefault()
 
-    const newNote = {
+    const editedNote = {
+      uuid: editingNote.uuid,
       title: event.target.noteTitle.value,
       content: event.target.noteContent.value
     }
 
-    onAdd(newNote)
+    onEdit(editedNote)
     return
   }
 
@@ -22,13 +23,18 @@ const NoteForm = ({ onClose, onAdd }) => {
       {createPortal(
         <div className={styles.overlay} onClick={onClose}>
           <div className={styles.container}>
-            <Title.H2>Add New Note</Title.H2>
-            <Form.Root onSubmit={handleSubmit} id="add-note">
+            <Title.H2>Edit New Note</Title.H2>
+            <Form.Root onSubmit={handleSubmit} id="edit-note">
               <Form.Group>
                 <Form.Label htmlFor="noteTitle">
                   <Title.H3>Title</Title.H3>
                 </Form.Label>
-                <Form.Control.Input name="noteTitle" id="noteTitle" required />
+                <Form.Control.Input
+                  name="noteTitle"
+                  id="noteTitle"
+                  required
+                  defaultValue={editingNote.title}
+                />
               </Form.Group>
               <Form.Group>
                 <Form.Label htmlFor="noteContent">
@@ -40,12 +46,13 @@ const NoteForm = ({ onClose, onAdd }) => {
                   name="noteContent"
                   id="noteContent"
                   required
+                  defaultValue={editingNote.content}
                 />
               </Form.Group>
             </Form.Root>
             <div className={styles.formActions}>
-              <Button variant="primary" form="add-note">
-                Add note
+              <Button variant="primary" form="edit-note">
+                Salvar
               </Button>
               <Button variant="secondary" onClick={onClose}>
                 Cancel
@@ -59,4 +66,4 @@ const NoteForm = ({ onClose, onAdd }) => {
   )
 }
 
-export default NoteForm
+export default EditNoteForm
