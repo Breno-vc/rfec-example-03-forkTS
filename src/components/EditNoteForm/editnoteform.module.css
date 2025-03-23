@@ -1,0 +1,33 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--overlay);
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--size-lg);
+}
+
+.container {
+  height: fit-content;
+  background-color: var(--white);
+  padding: var(--size-md) var(--size-lg);
+  border-radius: var(--radius);
+  margin-top: 6.4rem;
+  width: 100%;
+  max-width: 35rem;
+}
+
+.container > h2 {
+  margin-bottom: var(--size-sm);
+}
+
+.formActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--size-xl);
+}

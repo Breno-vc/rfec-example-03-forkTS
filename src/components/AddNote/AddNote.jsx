@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import styles from './addnote.module.css'
 import Button from '../Button/Button'
-import NoteForm from '../NoteForm/NoteForm'
+import AddNoteForm from '../AddNoteForm/AddNoteForm'
 import { v4 as uuid } from 'uuid'
 
 const AddNote = ({ notes, setNotes }) => {
@@ -26,7 +26,7 @@ const AddNote = ({ notes, setNotes }) => {
       <Button variant="primary" fullWidth onClick={() => setIsOpen(true)}>
         Add new note
       </Button>
-      {isOpen ? <NoteForm onClose={handleClose} onAdd={handleAdd} /> : null}
+      {isOpen ? <AddNoteForm onClose={handleClose} onAdd={handleAdd} /> : null}
     </div>
   )
 }
