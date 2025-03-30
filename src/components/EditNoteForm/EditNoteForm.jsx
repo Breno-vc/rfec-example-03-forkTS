@@ -23,7 +23,7 @@ const EditNoteForm = ({ onClose, onEdit, editingNote }) => {
       {createPortal(
         <div className={styles.overlay} onClick={onClose}>
           <div className={styles.container}>
-            <Title.H2>Edit New Note</Title.H2>
+            <Title.H2>Edit Note</Title.H2>
             <Form.Root onSubmit={handleSubmit} id="edit-note">
               <Form.Group>
                 <Form.Label htmlFor="noteTitle">
