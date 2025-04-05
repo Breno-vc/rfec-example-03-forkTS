@@ -4,16 +4,27 @@ import styles from './addnoteform.module.css'
 import Form from '../Form/Form'
 import Button from '../Button/Button'
 
-const AddNoteForm = ({ onClose, onAdd }) => {
-  function handleSubmit(event) {
+type AddNoteFormProps = {
+  onClose: (
+    event: React.FormEvent<HTMLFormElement | HTMLDivElement | HTMLButtonElement>
+  ) => void
+  onAdd: (newNote: { title: string; content: string }) => void
+}
+const AddNoteForm: React.FC<AddNoteFormProps> = ({ onClose, onAdd }) => {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
+    const form = event.target as HTMLFormElement
+    const title = (form.elements.namedItem('noteTitle') as HTMLInputElement)
+      .value
+    const content = (form.elements.namedItem('noteContent') as HTMLInputElement)
+      .value
     const newNote = {
-      title: event.target.noteTitle.value,
-      content: event.target.noteContent.value
+      title,
+      content
     }
-
     onAdd(newNote)
+
     return
   }
 

@@ -1,18 +1,25 @@
 import { useState } from 'react'
 import Button from '../Button/Button'
 import EditNoteForm from '../EditNoteForm/EditNoteForm'
+import INotes from '../../types/NotesType'
 
-const EditNote = ({ notes, setNotes, uuid }) => {
+type EditNoteProps = {
+  notes: INotes[]
+  setNotes: React.Dispatch<React.SetStateAction<INotes[]>>
+  uuid: string
+}
+
+const EditNote: React.FC<EditNoteProps> = ({ notes, setNotes, uuid }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [editingNote, setEditingNote] = useState({})
+  const [editingNote, setEditingNote] = useState<INotes | undefined>(undefined)
 
-  function handleClose(event) {
+  function handleClose(event: React.MouseEvent<HTMLButtonElement | HTMLDivElement>) {
     if (event.target == event.currentTarget) {
       setIsOpen(false)
     }
   }
 
-  function handleEdit(editedNote) {
+  function handleEdit(editedNote: INotes) {
     const filteredNotes = notes.filter((note) => note.uuid !== uuid)
     const newNotes = [...filteredNotes, editedNote]
     setNotes(newNotes)
