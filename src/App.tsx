@@ -6,7 +6,7 @@ import useLocalStorage from './hooks/useLocalStorage'
 
 const App = () => {
   const [notes, setNotes] = useLocalStorage('notes', [])
-  
+
   return (
     <Container>
       <Title.H1>Notes App</Title.H1>
