@@ -1,6 +1,6 @@
 import Note from '../Note/Note'
 import styles from './notes.module.css'
-import INotes from '../../types/NotesType'
+import INotes from '../../types/NoteType'
 
 type NotesProps = {
   notes: INotes[]

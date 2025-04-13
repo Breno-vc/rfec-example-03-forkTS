@@ -4,7 +4,7 @@ import styles from './addnote.module.css'
 import Button from '../Button/Button'
 import AddNoteForm from '../AddNoteForm/AddNoteForm'
 import { v4 as uuid } from 'uuid'
-import INotes from '../../types/NotesType'
+import INotes from '../../types/NoteType'
 
 type AddNoteProps = {
   notes: INotes[]

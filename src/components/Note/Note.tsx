@@ -2,7 +2,7 @@ import Title from '../Title/Title'
 import Button from '../Button/Button'
 import styles from './note.module.css'
 import EditNote from '../EditNote/EditNote'
-import INotes from '../../types/NotesType'
+import INotes from '../../types/NoteType'
 
 type NoteProps = {
   uuid: string

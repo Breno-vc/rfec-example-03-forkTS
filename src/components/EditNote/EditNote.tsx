@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Button from '../Button/Button'
 import EditNoteForm from '../EditNoteForm/EditNoteForm'
-import INotes from '../../types/NotesType'
+import INotes from '../../types/NoteType'
 
 type EditNoteProps = {
   notes: INotes[]
@@ -13,7 +13,9 @@ const EditNote: React.FC<EditNoteProps> = ({ notes, setNotes, uuid }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [editingNote, setEditingNote] = useState<INotes | undefined>(undefined)
 
-  function handleClose(event: React.MouseEvent<HTMLButtonElement | HTMLDivElement>) {
+  function handleClose(
+    event: React.MouseEvent<HTMLButtonElement | HTMLDivElement>
+  ) {
     if (event.target == event.currentTarget) {
       setIsOpen(false)
     }
